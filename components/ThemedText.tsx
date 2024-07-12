@@ -57,4 +57,10 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: '#0a7ea4',
   },
+  pageTitle: {
+    fontSize: 24,
+    fontWeight: 600,
+    lineHeight: 29,
+    color: '#1A1D1F'
+  }
 });
