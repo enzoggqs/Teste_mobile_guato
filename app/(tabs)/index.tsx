@@ -8,11 +8,17 @@ import CustomInput from '@/components/CustomInput';
 import CustomCard from '@/components/CustomCard';
 import CustomIcon from '@/components/CustomIcon';
 import CustomTitle from '@/components/CustomTitle';
+import { useNavigation } from 'expo-router';
 
 export default function HomeScreen() {
   const [location, setLocation] = useState('');
   const [points, setPoints] = useState(0);
   const [username, setUsername] = useState("ASHFAK");
+  const navigation = useNavigation(); // Obtém a função de navegação
+
+  const handleSeeAllPress = () => {
+    navigation.navigate('categories'); // Navega para a tela de lista de categorias
+  };
 
   return (
     <ScrollView style={styles.safeArea}>
@@ -53,7 +59,7 @@ export default function HomeScreen() {
           <CustomIcon title={"AC Repair"} color={"#FFBC99"} size={60} imageSource={require('@/assets/images/ACServiceIcon.png')} />
           <CustomIcon title={"Beauty"} color={"#CABDFF"} size={60} imageSource={require('@/assets/images/BeautyServiceIcon.png')} />
           <CustomIcon title={"Appliance"} color={"#B1E5FC"} size={60} imageSource={require('@/assets/images/ApplianceServiceIcon.png')} />
-          <CustomIcon border={true} title={"See All"} color={"#FAFAFA"} size={60} imageSource={require('@/assets/images/ArrowForward.png')} />
+          <CustomIcon onPress={handleSeeAllPress} border={true} title={"See All"} color={"#FAFAFA"} size={60} imageSource={require('@/assets/images/ArrowForward.png')} />
         </CustomBox>
         <CustomBox scrollable={false}>
           <CustomTitle title="Cleaning Services">
