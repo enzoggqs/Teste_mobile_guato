@@ -28,21 +28,21 @@ const CategoryListScreen = () => {
                 onPress={() => handleSeeService('AC')}
                 title={"AC Repair"}
                 color={"#FFBC99"}
-                size={75}
+                size={70}
                 imageSource={require('@/assets/images/ACServiceIcon.png')}
               />
               <CustomIcon
                 onPress={() =>handleSeeService('Beauty')}
                 title={"Beauty"}
                 color={"#CABDFF"}
-                size={75}
+                size={70}
                 imageSource={require('@/assets/images/BeautyServiceIcon.png')}
               />
               <CustomIcon
                 onPress={() => handleSeeService('Appliance')}
                 title={"Appliance"}
                 color={"#B1E5FC"}
-                size={75}
+                size={70}
                 imageSource={require('@/assets/images/ApplianceServiceIcon.png')}
               />
             </CustomBox>
@@ -51,21 +51,21 @@ const CategoryListScreen = () => {
                 onPress={() => handleSeeService('Painting')}
                 title={"Painting"}
                 color={"#B5EBCD"}
-                size={75}
+                size={70}
                 imageSource={require('@/assets/images/PaintingServiceIcon.png')}
               />
               <CustomIcon
                 onPress={() => handleSeeService('Cleaning')}
                 title={"Cleaning"}
                 color={"#FFD88D"}
-                size={75}
+                size={70}
                 imageSource={require('@/assets/images/CleaningServiceIcon.png')}
               />
               <CustomIcon
                 onPress={() => handleSeeService('Plumbing')}
                 title={"Plumbing"}
                 color={"#CBEBA4"}
-                size={75}
+                size={70}
                 imageSource={require('@/assets/images/PlumbingServiceIcon.png')}
               />
             </CustomBox>
@@ -74,21 +74,21 @@ const CategoryListScreen = () => {
                 onPress={() => handleSeeService('Electronics')}
                 title={"Electronics"}
                 color={"#FB9B9B"}
-                size={75}
+                size={70}
                 imageSource={require('@/assets/images/ElectronicsServiceIcon.png')}
               />
               <CustomIcon 
               onPress={() => handleSeeService('Shifting')} 
               title={"Shifting"} 
               color={"#F8B0ED"} 
-              size={75} 
+              size={70} 
               imageSource={require('@/assets/images/ShiftingServiceIcon.png')} 
               />
               <CustomIcon 
               onPress={() => handleSeeService('Mens Salon')} 
               title={"Men's Salon"} 
               color={"#AFC6FF"} 
-              size={75} 
+              size={70} 
               imageSource={require('@/assets/images/MensSalonServiceIcon.png')} 
               />
             </CustomBox>

@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
         padding: 16,
         elevation: 5,
         alignItems: 'flex-start',
-        columnGap: 10
+        columnGap: 10,
     },
     nonScrollableBox: {
         padding: 16,

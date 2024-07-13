@@ -3,11 +3,14 @@ import { View, TextInput, StyleSheet, TouchableOpacity, Image } from 'react-nati
 import { Ionicons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 
-const CustomInput = ({ showBackArrow = false, placeholderText, ...props }) => {
+const CustomInput = ({ showBackArrow = false, placeholderText, border = true, showGlass = true, ...props }) => {
     const navigation = useNavigation();
 
     return (
-        <View style={styles.container}>
+        <View style={[styles.container, {
+            borderWidth: border ? 1 : 0,
+            borderColor: border ? '#ECECEC' : 'transparent'
+        }]}>
             <View style={[styles.leftSideInput, showBackArrow && styles.leftWithArrow]}>
                 {showBackArrow && (
                     <TouchableOpacity onPress={() => navigation.goBack()} style={styles.iconLeft}>
@@ -21,12 +24,14 @@ const CustomInput = ({ showBackArrow = false, placeholderText, ...props }) => {
                     {...props}
                 />
             </View>
-            <View style={styles.iconContainer}>
-                <Image
-                    source={require('@/assets/images/Search.png')}
-                    style={styles.iconRight}
-                />
-            </View>
+            {showGlass && (
+                <View style={styles.iconContainer}>
+                    <Image
+                        source={require('@/assets/images/Search.png')}
+                        style={styles.iconRight}
+                    />
+                </View>
+            )}
         </View>
     );
 };
@@ -50,7 +55,7 @@ const styles = StyleSheet.create({
         flex: 1,
         maxWidth: '85%',
     },
-    leftWithArrow: { 
+    leftWithArrow: {
     },
     iconLeft: {
         paddingHorizontal: 10,
