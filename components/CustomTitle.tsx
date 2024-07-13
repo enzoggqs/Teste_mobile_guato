@@ -1,11 +1,11 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
-const CustomTitle = ({ title, children }) => {
+const CustomTitle = ({ title, children, fontSize = 22, fontWeight = 600 }) => {
     return (
         <View style={styles.container}>
             <View style={styles.verticalLine} />
-            <Text style={styles.title}>{title}</Text>
+            <Text style={[styles.title, { fontSize: fontSize, fontWeight: fontWeight }]}>{title}</Text>
             <View style={styles.childrenContainer}>
                 {children}
             </View>
@@ -25,8 +25,6 @@ const styles = StyleSheet.create({
         marginRight: 10,
     },
     title: {
-        fontSize: 22,
-        fontWeight: 600,
         color: '#000',
         flex: 1,
         letterSpacing: -1
