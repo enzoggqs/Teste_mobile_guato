@@ -1,50 +1,51 @@
-# Welcome to your Expo app 👋
+# Teste para a vaga de desenvolver React Nativa na Guató Digital
+![Author](https://img.shields.io/badge/author-enzoggqs-blueviolet)
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
-## Get started
+## Telas da aplicação:
 
-1. Install dependencies
+### Tela Home:
 
-   ```bash
-   npm install
-   ```
+   ![image](https://github.com/user-attachments/assets/478d54e7-6d81-4597-872f-46ff967ee73c)
 
-2. Start the app
 
-   ```bash
-    npx expo start
-   ```
+### Tela Categorias:
 
-In the output, you'll find options to open the app in a
+![image](https://github.com/user-attachments/assets/6ae1c4e3-8fc2-4709-8e2d-340898d1d70b)
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+### Tela Serviços:
+Os textos página alteram conforme a categoria que o usuário selecionar
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+![image](https://github.com/user-attachments/assets/d534e565-fa6d-46c5-98a7-4339db2e68cd)
 
-## Get a fresh project
+### Tela Perfil:
+![image](https://github.com/user-attachments/assets/52ef71d8-111e-4447-8cc1-9cd82a0583e4)
 
-When you're ready, run:
+## Tecnologias
 
-```bash
-npm run reset-project
+- [React Native]([https://reactjs.org/](https://reactnative.dev/))
+- [Typescript]([https://www.javascript.com/](https://www.typescriptlang.org/))
+
+## Rodando a aplicação
+
+### Requisitos
+
+- Para rodar o projeto, você precisa ter o [NPM](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm) instalado.
+
+**Clone o repositório e acesse a pasta clonada**
+
+$ git clone (https://github.com/enzoggqs/Teste_mobile_guato) && cd Teste_mobile_guato
+
+**Siga os passos abaixo**
+
+```
+# Instale as dependências
+$ npm install
+
+# Run the web server
+$ npm run start
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+A aplicação estará disponível para ser acessada em seu navegador em `http://localhost:8081`
 
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Made with 💜 by Enzo Gabriel [Check out my LinkedIn](https://www.linkedin.com/in/enzoggqs)
