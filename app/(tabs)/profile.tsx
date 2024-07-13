@@ -4,16 +4,30 @@ import CustomInput from '@/components/CustomInput'
 import CustomTitle from '@/components/CustomTitle'
 import Header from '@/components/Header'
 import { ThemedText } from '@/components/ThemedText'
+import { Ionicons } from '@expo/vector-icons'
+import { useNavigation } from 'expo-router'
 import React from 'react'
-import { Image, Pressable, StyleSheet, Text, View } from 'react-native'
+import { Image, Pressable, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 
 const Profile = () => {
+    const navigation = useNavigation();
+
     return (
         <View style={styles.safeArea}>
             <Header>
+                <TouchableOpacity onPress={() => navigation.goBack()} style={styles.iconLeft}>
+                    <Ionicons name="arrow-back" size={24} color="black" />
+                </TouchableOpacity>
             </Header>
             <View style={styles.content}>
-                <CustomTitle title={"Profile"} fontSize={30} fontWeight={700} />
+                <View style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
+                    <CustomTitle title={"Profile"} fontSize={30} fontWeight={700} />
+                    <Pressable style={styles.button}>
+                        <ThemedText style={styles.buttonText}>
+                            Edit Profile
+                        </ThemedText>
+                    </Pressable>
+                </View>
                 <CustomBox scrollable={false}>
                     <View style={styles.userData}>
                         <View style={styles.userPhoto}>
@@ -78,6 +92,20 @@ const styles = StyleSheet.create({
         fontSize: 18,
         fontWeight: 600,
         marginVertical: 10
+    },
+    iconLeft: {
+        marginLeft: 12
+    },
+    button: {
+        backgroundColor: "#FFFFFF",
+        borderRadius: 110,
+        paddingHorizontal: 12,
+        paddingVertical: 10,
+    },
+    buttonText: {
+        fontSize: 15,
+        fontWeight: 500,
+        color: "#6759FF"
     }
 });
 
