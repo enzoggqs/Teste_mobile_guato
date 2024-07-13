@@ -8,7 +8,8 @@ import CustomInput from '@/components/CustomInput';
 import CustomCard from '@/components/CustomCard';
 import CustomIcon from '@/components/CustomIcon';
 import CustomTitle from '@/components/CustomTitle';
-import { useNavigation } from 'expo-router';
+import { useNavigation, NavigationContainer } from 'expo-router';
+import { createDrawerNavigator } from '@react-navigation/drawer';
 
 export default function HomeScreen() {
   const [location, setLocation] = useState('');
@@ -28,7 +29,9 @@ export default function HomeScreen() {
     <ScrollView style={styles.safeArea}>
       <Header>
         <View style={styles.boxLeft}>
-          <Image source={require('@/assets/images/icon.png')} style={styles.menu} />
+          <Pressable>
+            <Image onPress={() => drawerRef.current?.openDrawer()} source={require('@/assets/images/icon.png')} style={styles.menu} />
+          </Pressable>
           <View style={styles.localization}>
             <Text style={styles.headerText}>CURRENT LOCATION</Text>
             {location ? <Text style={styles.locationSummary}>{location}</Text> : null}
