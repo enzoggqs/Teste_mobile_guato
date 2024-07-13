@@ -14,17 +14,21 @@ export default function HomeScreen() {
   const [location, setLocation] = useState('');
   const [points, setPoints] = useState(0);
   const [username, setUsername] = useState("ASHFAK");
-  const navigation = useNavigation(); // Obtém a função de navegação
+  const navigation = useNavigation();
 
   const handleSeeAllPress = () => {
-    navigation.navigate('categories'); // Navega para a tela de lista de categorias
+    navigation.navigate('categories');
+  };
+
+  const handleSeeService = (category: String) => {
+    navigation.navigate('services', { category });
   };
 
   return (
     <ScrollView style={styles.safeArea}>
       <Header>
         <View style={styles.boxLeft}>
-          <Image source={require('@/assets/images/icon.png')} />
+          <Image source={require('@/assets/images/icon.png')} style={styles.menu} />
           <View style={styles.localization}>
             <Text style={styles.headerText}>CURRENT LOCATION</Text>
             {location ? <Text style={styles.locationSummary}>{location}</Text> : null}
@@ -56,14 +60,39 @@ export default function HomeScreen() {
           <CustomCard color={"#EAF6EF"} product={"Electronics Service"} offer={"40"} />
         </CustomBox>
         <CustomBox>
-          <CustomIcon title={"AC Repair"} color={"#FFBC99"} size={60} imageSource={require('@/assets/images/ACServiceIcon.png')} />
-          <CustomIcon title={"Beauty"} color={"#CABDFF"} size={60} imageSource={require('@/assets/images/BeautyServiceIcon.png')} />
-          <CustomIcon title={"Appliance"} color={"#B1E5FC"} size={60} imageSource={require('@/assets/images/ApplianceServiceIcon.png')} />
-          <CustomIcon onPress={handleSeeAllPress} border={true} title={"See All"} color={"#FAFAFA"} size={60} imageSource={require('@/assets/images/ArrowForward.png')} />
+          <CustomIcon
+            onPress={() => handleSeeService('AC')}
+            title={"AC Repair"}
+            color={"#FFBC99"}
+            size={60}
+            imageSource={require('@/assets/images/ACServiceIcon.png')}
+          />
+          <CustomIcon
+            onPress={() => handleSeeService('Beauty')}
+            title={"Beauty"}
+            color={"#CABDFF"}
+            size={60}
+            imageSource={require('@/assets/images/BeautyServiceIcon.png')}
+          />
+          <CustomIcon
+            onPress={() => handleSeeService('Appliance')}
+            title={"Appliance"}
+            color={"#B1E5FC"}
+            size={60}
+            imageSource={require('@/assets/images/ApplianceServiceIcon.png')}
+          />
+          <CustomIcon
+            onPress={handleSeeAllPress}
+            border={true}
+            title={"See All"}
+            color={"#FAFAFA"}
+            size={60}
+            imageSource={require('@/assets/images/ArrowForward.png')}
+          />
         </CustomBox>
         <CustomBox scrollable={false}>
           <CustomTitle title="Cleaning Services">
-            <Pressable style={styles.button}>
+            <Pressable style={styles.button} onPress={() => handleSeeService('Cleaning')}>
               <ThemedText style={styles.buttonText}>See All &gt;</ThemedText>
             </Pressable>
           </CustomTitle>
@@ -99,6 +128,9 @@ const styles = StyleSheet.create({
   content: {
     justifyContent: 'flex-start',
     paddingHorizontal: 20
+  },
+  menu: {
+    cursor: 'pointer'
   },
   headerText: {
     fontSize: 12,
