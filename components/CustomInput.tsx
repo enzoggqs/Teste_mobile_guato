@@ -36,7 +36,8 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         borderRadius: 8,
-        paddingVertical: 6,
+        paddingVertical: 10,
+        paddingHorizontal: 10,
         borderWidth: 1,
         borderColor: '#ccc',
         backgroundColor: "#FBFBFB",
@@ -49,20 +50,19 @@ const styles = StyleSheet.create({
         flex: 1,
         maxWidth: '85%',
     },
-    leftWithArrow: {
-        maxWidth: '85%',
+    leftWithArrow: { 
     },
     iconLeft: {
-        paddingHorizontal: 6,
+        paddingHorizontal: 10,
     },
     input: {
         flex: 1,
         height: 40,
-        paddingHorizontal: 10,
-        marginLeft: 10,
+        paddingHorizontal: 6,
+        fontSize: 16,
     },
     inputWithArrow: {
-        paddingLeft: 40, // Ajusta o padding para dar espaço ao ícone à esquerda
+        paddingLeft: 10,
     },
     iconRight: {
         width: 20,

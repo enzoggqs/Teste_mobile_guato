@@ -32,12 +32,6 @@ export function Collapsible({ children, title, onLocationChange }: PropsWithChil
       </TouchableOpacity>
       {isOpen && (
         <View style={styles.absoluteContent}>
-          <TextInput
-            style={styles.input}
-            placeholder="Digite sua localização"
-            value={location}
-            onChangeText={handleLocationChange}
-          />
           {children}
         </View>
       )}
