@@ -33,6 +33,17 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
+        name="services"
+        options={{
+          tabBarLabel: "",
+          tabBarIcon: ({ color, focused }) => (
+            <TabBarIcon name={focused ? 'document-text' : 'document-text-outline'} color={color} />
+          ),
+          href: null,
+        }}
+        initialParams={{ category: null }}
+      />
+      <Tabs.Screen
         name="explore"
         options={{
           tabBarLabel: "",
